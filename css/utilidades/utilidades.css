@@ -11,9 +11,6 @@
 
 }
  
-.botao{ 
-    background-image: linear-gradient(#ffbb0d, #e59317);
-}
 @media(max-width:800px){
     .botao{
         margin-bottom: 16px;
