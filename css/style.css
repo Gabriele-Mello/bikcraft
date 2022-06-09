@@ -27,3 +27,5 @@
 
 /* bicicletas*/
 @import url(./bicicletas/bicicletas.css);
+/* bicicletas- interna- nimbus */
+@import url(./bicicletas/nimbus.css);

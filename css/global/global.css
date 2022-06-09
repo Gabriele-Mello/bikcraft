@@ -3,7 +3,7 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-p, h1, h2, h3, h4, ul, span, blockquote{
+p, h1, h2, h3, h4, ul, span, blockquote,dd{
     margin: 0px;
     padding: 0px;
 }

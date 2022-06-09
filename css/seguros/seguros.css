@@ -14,6 +14,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
+
 }
 .seguros-item{
     display: grid;
@@ -21,10 +22,8 @@
     background-color: var(--cor-12);
     padding: 32px;
     padding-left: 60px;
-    
     grid-template-columns: 1fr auto;
     color: var(--cor-1);
-  
 }
 
 .seguros h3{
@@ -66,13 +65,137 @@
 
 }
 
+/** -------- vantagens ==== **/
+.vantagens{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--cor-12);
+    gap:50px;
+}
+
+.vantagens-bg{
+    background-color: var(--cor-12);
+}
+
+.vantagens-bg h2{
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.vantagens h3{
+    color: var(--cor-0);
+    font: 400 1.5rem/1.5 "Poppins", sans-serif;
+    padding: 10px 0 12px 0;
+}
+
+.vantagens{
+    padding-bottom: 100px;
+}
+
 @media (max-width:800px){
     .seguros{   
         grid-template-columns: 1fr;
+        max-width:fit-content;
+    }
+
+    .seguros-item{
+        padding: 50px 100px;
     }
     .seguros h2{
         padding-bottom: 30px;
-        padding-top: 30px;
-        
+        padding-top: 30px; 
+    }
+    .vantagens-bg h2{
+        font-size: 3rem;
+    }
+}
+@media (max-width:1050px){
+    .vantagens{
+        grid-template-columns: 1fr 1fr;
+        gap:30px;
+
+    }
+}
+
+@media (max-width:550px){
+    .vantagens {
+        grid-template-columns:1fr;
+        gap:20px;
+    
+    }
+    
+    .vantagens li{
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .vantagens img{
+        display: flex;
+        align-self: center;
+        margin-right: 8px ;
+    }
+    .vantagens p{
+        grid-column: 1/-1;
+    }
+}
+
+/** ------- pergutnas frequentes ====== **/
+
+.perguntas {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.perguntas h2{
+    margin-bottom: 60px;
+}
+.perguntas dl > div{
+    padding: 20px;
+    border-radius: 4px;
+}
+.perguntas dl > div:nth-child(odd){
+    background-color:var(--cor-1);
+}
+
+.perguntas dt{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.perguntas dt::before{
+    content: " ";
+    background-color: var(--cor-p1);
+    width: 12px;
+    height: 8px;
+    display: inline-block;
+}
+.perguntas dt::after{
+    content: " ";
+    background-image: url(../../img/icones/seta-abrir.svg);
+    width: 14px;
+    height: 6px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.perguntas dt:hover::after{
+    transform: rotate(180deg);
+}
+
+.perguntas dd{
+    padding-left: 20px;
+    padding-top: 16px;
+    max-width: 80ch;
+}
+
+@media(max-width:800px){
+    .perguntas {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .perguntas h2{
+        margin-bottom: 30px;
     }
 }

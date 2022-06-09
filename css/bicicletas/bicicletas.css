@@ -7,15 +7,23 @@
     grid-row: span 6;
     margin-top: 60px;
     max-width: 95%;
-    position: relative;
+    display: grid;
+
+}
+
+.bici-img img{
+    grid-area: 1/1;
 }
 .item span{
-    position: absolute;
-    left: 60px;
     background-color: var(--cor-12);
     color: var(--cor-1);
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 4px 0 4px 0;
+    grid-area: 1/1;
+    place-self: start end;
+    font-display: inline-block;
+    margin-top: 20px;
+
 }
 
 .item ul{
@@ -62,4 +70,34 @@
 .magic{
     background-color: var(--cor-12);
     box-shadow: inset 300px 0 0 var(--cor-0);
+}
+
+@media(max-width: 800px){
+    .item{
+        grid-template-columns: 1fr;
+        gap:20px;
+    }
+    .item-bg{
+        background-color: black;
+        background-image: linear-gradient( to bottom, white  20%, black 0%);}
+
+    .item-cont{
+        margin: auto;
+    }
+    .item h2{
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .bici-img{
+        max-width: 80%;
+        margin: auto;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:500px){
+    .item p, ul, li{
+        font-size: 1rem;
+    }
 }
